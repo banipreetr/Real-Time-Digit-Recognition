@@ -94,6 +94,7 @@ def digPredict(gameDisplay):
     img = resizeimage.resize_cover(img, [28, 28])
     imgobj = np.asarray(img)
     imgobj = cv2.cvtColor(imgobj, cv2.COLOR_RGB2GRAY)
+    (_, imgobj) = cv2.threshold(imgobj, 128, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
     #Predicting
     imgobj = imgobj/255
     b = model.predict(np.reshape(imgobj,[1, imgobj.shape[0], imgobj.shape[1],1]))
