@@ -4,3 +4,7 @@ Real Time Digit Recognition made using pygame, PIL, cv2 and keras with tensorflo
 * Run the script
 * Write your digit on the pygame black Drawing Pad.
 * Wait a second or so, the text is recgonized.
+
+## Example:
+
+![alt text](./example/example.gif "The Drawing Pad")
